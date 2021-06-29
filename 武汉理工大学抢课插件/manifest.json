@@ -1,0 +1,37 @@
+{
+    "manifest_version":2,
+    "version":"1.0.0",
+    "name":"武汉理工大学抢课插件",
+    "description":"武汉理工大学抢课插件",
+    "author":"原创：bad_fri3nd   修改:xiaozhangtx",
+    "icons": {
+        "16": "wut.png"
+    },
+    "browser_action":{
+        "default_title" : "武汉理工大学抢课插件",
+        "default_icon" : {
+        "16" : "wut.png"
+    }
+    },
+    "permissions":["http://202.114.90.180/Course/*",
+                   "http://202.114.90.184/Course/*",
+                   "http://59.69.102.13/Course/*",
+                   "http://202.114.50.131/Course/*",
+                   "http://202.114.50.130/Course/*",
+                   "http://218.197.102.183/Course/*"],
+    "background":{},
+    "content_scripts":[{
+            "matches":["http://202.114.90.180/Course/*",
+                "http://202.114.90.184/Course/*",
+                 "http://59.69.102.13/Course/*",
+                 "http://202.114.50.131/Course/*",
+                 "http://202.114.50.130/Course/*",
+                 "http://218.197.102.183/Course/*"],
+            "js":["jquery.js","index.js"],
+            "run_at":"document_end",
+            "all_frames":true
+ 
+        }]
+     
+}
+
